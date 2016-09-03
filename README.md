@@ -19,4 +19,4 @@ Creating an appleScript payload with Empyre:
 (EmPyre: listeners) > usestager applescript mylistener
 (EmPyre: stager/applescript) > execute
 ```
-open mail.py and paste the output in the specified area.  Modify the trigger word as you see fit.  
+Open mail.py and paste the output in the specified area.  Modify the trigger word as you see fit.  
