@@ -5,10 +5,8 @@ This script creates a new rule in the MacOS Mail application to automatically tr
 
 ## INSTALL:
 
-All dependancies are met on a default installation of MacOS.  With that said, you will likely want to use EmPyre
+All dependancies are met on a default installation of MacOS.  With that said, you will likely want to use EmPyre to create your appleScript payload. 
 https://github.com/adaptivethreat/EmPyre
-to create your appleScript payload. 
-
 
 ## USAGE:
 Creating an appleScript payload with Empyre:
