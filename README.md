@@ -4,11 +4,11 @@
 This script creates a new rule in the MacOS Mail application to automatically trigger an appleScript payload when an email is recieved using a trigger word.
 
 ## INSTALL:
-```
+
 All dependancies are met on a default installation of MacOS.  With that said, you will likely want to use EmPyre
 https://github.com/adaptivethreat/EmPyre
 to create your appleScript payload. 
-```
+
 
 ## USAGE:
 Creating an appleScript payload with Empyre:
