@@ -1,7 +1,7 @@
 # MailPersist - Post-exploitation script for MacOS persistance 
 
 ## ABOUT:
-This script creates a new rule in the MacOS Mail application to automatically trigger an appleScript payload when an email is recieved using a trigger word.
+This script creates a new rule in the MacOS Mail application to automatically trigger an appleScript payload when an email is recieved using a trigger word in the subject of the email.
 
 ## INSTALL:
 
