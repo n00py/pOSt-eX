@@ -97,5 +97,5 @@ with open(script, 'w+') as f:
 
 os.system("/usr/libexec/PlistBuddy -c 'Merge " + SyncedRules + "' " + home + "/Library/Mobile\ Documents/com~apple~mail/Data/V3/MailData/ubiquitous_SyncedRules.plist")
 os.system("/usr/libexec/PlistBuddy -c 'Merge " + RulesActiveState + "' "+ home + "/Library/Mail/V3/MailData/RulesActiveState.plist")
-os.system("rm " + SyncedRules)
-os.system("rm " + RulesActiveState)
+os.system("rm /tmp/" + SyncedRules)
+os.system("rm /tmp/" + RulesActiveState)
