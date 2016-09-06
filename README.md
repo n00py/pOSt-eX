@@ -11,7 +11,7 @@ All dependancies are met on a default installation of OS X.  With that said, you
 https://github.com/adaptivethreat/EmPyre
 
 ## USAGE:
-Creating an appleScript payload with [Empyre](https://github.com/adaptivethreat/EmPyre):
+Creating an AppleScript payload with [Empyre](https://github.com/adaptivethreat/EmPyre):
 ```
 (EmPyre) > listeners
 (EmPyre: listeners) > set Name mylistener
