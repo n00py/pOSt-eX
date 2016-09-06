@@ -3,6 +3,8 @@
 ## ABOUT:
 This script creates a new rule in the OS X Mail application to automatically trigger an appleScript payload when an email is recieved using a trigger word in the subject of the email.
 
+For increased stealth, The trigger email will be deleted before it is visible.  The Script Monitor will also be killed imediately after executing the python stager. There should not be any visual indicators. 
+
 ## INSTALL:
 
 All dependancies are met on a default installation of OS X.  With that said, you will likely want to use EmPyre to create your AppleScript payload. 
@@ -23,4 +25,4 @@ When pasting the AppleScript payload from Empire, you need to make two modificat
 - Double up the backslash characters
 - Remove the final double quote 
 
-For increased stealth, The trigger email will be deleted before it is visible.  The Script Monitor will also be killed imediately after executing the python stager. There should not be any visual indicators. 
+
