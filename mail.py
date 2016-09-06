@@ -42,7 +42,7 @@ plist = '''<?xml version="1.0" encoding="UTF-8"?>
 			</dict>
 		</array>
 		<key>Deletes</key>
-		<string>NO</string>
+		<string>YES</string>
 		<key>HighlightTextUsingColor</key>
 		<string>NO</string>
 		<key>MarkFlagged</key>
