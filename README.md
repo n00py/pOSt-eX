@@ -18,3 +18,5 @@ Creating an appleScript payload with Empyre:
 (EmPyre: stager/applescript) > execute
 ```
 Open mail.py and paste the output in the specified area.  Modify the trigger word as you see fit.  
+
+For increased stealth, The trigger email will be deleted before it is visible.  The Script Monitor will also be killed imediately after executing the python stager. There should not be any visual indicators. 
