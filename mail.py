@@ -109,10 +109,10 @@ with open(script, 'w+') as f:
     f.write(payload)
     f.close()
 
-try:
+if os.path.isfile(home + "/Users/Spartan/Library/Mobile Documents/com~apple~mail/Data/V3/MailData/ubiquitous_SyncedRules.plist"):
     #If this exists, this should auto-sync immediately and overwrite any value in SyncedRules.plist
     os.system("/usr/libexec/PlistBuddy -c 'Merge " + SyncedRules + "' " + home + "/Library/Mobile\ Documents/com~apple~mail/Data/V3/MailData/ubiquitous_SyncedRules.plist")
-except:
+else:
     #If it doesn't, here is the main file for rules that will become active on restart
     os.system("/usr/libexec/PlistBuddy -c 'Merge " + SyncedRules + "' " + home + "/Library/Mail/V3/MailData/SyncedRules.plist")
 
