@@ -66,7 +66,7 @@ class Module:
             'Trigger' : {
                 'Description'   :   'The trigger word.',
                 'Required'      :   True,
-                'Value'         :   'Harambe'
+                'Value'         :   ''
             }
         }
 #
