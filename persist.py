@@ -1,3 +1,4 @@
+# THIS IS A MODULE TO BE USED WITH EMPYRE
 from time import time
 from random import choice
 from string import ascii_uppercase
