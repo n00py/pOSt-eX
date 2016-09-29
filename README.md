@@ -1,7 +1,7 @@
 # pOSt-eX - OS X post-exploitation scripts
 - mail.py - Creates a an ApleScript payload with Empire and configures a mail rule to launch it
 - persist.py - EmPyre module implementation of mail.py
-- monitor.py - Piggybacks off a users Sudo session to spawn an agent with root privileges 
+- monitor.py - Piggybacks off a user's sudo session to spawn an agent with root privileges 
 - piggyback.py - EmPye module of monitor.py
 
 ## MailPersist - Post-exploitation script for OS X persistance 
