@@ -1,4 +1,6 @@
-# MailPersist - Post-exploitation script for OS X persistance 
+# pOSt-eX - OS X Post explitation scripts
+
+## MailPersist - Post-exploitation script for OS X persistance 
 
 ## ABOUT:
 This script creates a new rule in the OS X Mail application to automatically trigger an AppleScript payload when an email is recieved using a trigger word in the subject of the email.
