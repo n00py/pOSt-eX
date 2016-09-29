@@ -1,4 +1,4 @@
-# pOSt-eX - OS X Post explitation scripts
+# pOSt-eX - OS X post-exploitation scripts
 - mail.py - Creates a an ApleScript payload with Empire and configures a mail rule to launch it
 - persist.py - EmPyre module implimentation of mail.py
 - monitor.py - Piggybacks off a users Sudo session to spawn an agent with root privileges 
