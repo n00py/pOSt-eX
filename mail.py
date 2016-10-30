@@ -2,7 +2,7 @@ import os
 from time import time
 from random import choice
 from string import ascii_uppercase
-__author__ = 'Esteban Rodriguez (n00py)'
+__author__ = '(n00py)'
 
 #Enter a string that you would like the rule to be named
 ruleName = "Spam Filter"
