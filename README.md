@@ -1,3 +1,5 @@
+### Now included in Empire 2.0 Beta
+
 # pOSt-eX - OS X post-exploitation scripts
 - mail.py - Creates a an ApleScript payload with Empire and configures a mail rule to launch it
 - persist.py - EmPyre module implementation of mail.py
