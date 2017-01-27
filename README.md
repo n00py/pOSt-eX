@@ -1,4 +1,9 @@
 ### Now included in Empire 2.0 Beta
+- bashdoor.py - Empire module to backdoor the sudo command
+- mail.py - Empire Module to add mail rule persistence 
+- piggyback.py - Empire Module for piggybacking off of sudo sessions
+
+It's recommended just ot use the Empire modules, but I've left the other scripts I created when initially developing this.  
 
 # pOSt-eX - OS X post-exploitation scripts
 - mail.py - Creates a an ApleScript payload with Empire and configures a mail rule to launch it
