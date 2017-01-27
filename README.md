@@ -5,6 +5,9 @@
 
 It's recommended just ot use the Empire modules, but I've left the other scripts I created when initially developing this.  
 
+https://www.n00py.io/2016/10/using-email-for-persistence-on-os-x/
+https://www.n00py.io/2016/10/privilege-escalation-on-os-x-without-exploits/
+
 # pOSt-eX - OS X post-exploitation scripts
 - mail.py - Creates a an ApleScript payload with Empire and configures a mail rule to launch it
 - persist.py - EmPyre module implementation of mail.py
