@@ -3,7 +3,7 @@
 - mail.py - Empire Module to add mail rule persistence 
 - piggyback.py - Empire Module for piggybacking off of sudo sessions
 
-It's recommended just ot use the Empire modules, but I've left the other scripts I created when initially developing this.  
+It's recommended just to use the Empire modules, but I've left the other scripts I created when initially developing this.  
 
 https://www.n00py.io/2016/10/using-email-for-persistence-on-os-x/
 
